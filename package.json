@@ -1,0 +1,11 @@
+{
+  "name": "ansible4fedramp",
+  "version": "1.0.0",
+  "description": "Static Site to host Ansible4FedRAMP content",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"no tests\""
+  },
+  "author": "Jonathan I. Davila <@defionscode>",
+  "license": "MIT"
+}
