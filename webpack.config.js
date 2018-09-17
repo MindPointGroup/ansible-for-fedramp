@@ -30,18 +30,6 @@ const plugins = [
   })
 ]
 
-const optimization = {
-  minimizer: [
-    new UglifyJsPlugin({
-      uglifyOptions: {
-        keep_fnames: true
-      },
-      extractComments: true,
-      parallel: true
-    })
-  ]
-}
-
 const rules = [
   {
     test: /\.js$/,
@@ -108,6 +96,5 @@ module.exports = {
     rules
   },
   plugins,
-  devServer,
-  optimization
+  devServer
 }
