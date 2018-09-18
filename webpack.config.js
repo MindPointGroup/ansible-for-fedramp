@@ -96,5 +96,8 @@ module.exports = {
     rules
   },
   plugins,
+  optimization: {
+    minimize: false
+  },
   devServer
 }
