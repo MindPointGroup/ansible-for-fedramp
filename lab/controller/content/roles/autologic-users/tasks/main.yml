@@ -1,0 +1,17 @@
+---
+
+- include: groups.yml
+  when: autologic_manage_users
+  tags: autologic_users_play_groups
+
+- include: users.yml
+  when: autologic_manage_users and not autologic_department_pattern
+  tags: autologic_users_play_users
+
+- include: users_department_pattern.yml
+  when: autologic_manage_users and autologic_department_pattern
+  tags: autologic_users_play_users
+
+- include: sudo.yml
+  when: autologic_manage_sudo
+  tags: autologic_users_play_sudo

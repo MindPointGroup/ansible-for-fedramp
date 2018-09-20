@@ -1,0 +1,50 @@
+- name: Ensure there is a zero out/in security group
+  ec2_group:
+    region: "{{ aws_region }}"
+    name: zero
+    description: nothing gets in, nothing gets out
+    vpc_id: "{{ vpc }}"
+    rules: []
+    rules_egress: []
+    purge_rules: true
+    purge_rules_egress: true
+  register: zero
+
+- name: Debug zero
+  debug:
+    var: zero
+    verbosity: 2
+
+- name: Purge security groups
+  ec2:
+    region: "{{ aws_region }}"
+    vpc_subnet_id: "{{ subnet }}"
+    instance_ids:
+      - "{{ instance }}"
+    state: stopped
+    group_id: "{{ zero.group_id }}"
+    wait: yes
+  register: sick_ec2
+
+- name: Debug sick_ec2
+  debug:
+    var: sick_ec2
+    verbosity: 2
+
+- name: Create an image of the compromised node
+  ec2_ami:
+    region: "{{ aws_region }}"
+    instance_id: "{{ instance }}"
+    wait: yes
+    name: "{{ incident_id }}"
+    tags:
+      Name: Quartined {{ incident_id }}
+  register: image
+
+- name: debug image details
+  debug:
+    var: image
+    verbosity: 2
+
+## At this point you have all the variables you need to generate a text report, make a POST to your SIEM, send an email, etc etc.
+

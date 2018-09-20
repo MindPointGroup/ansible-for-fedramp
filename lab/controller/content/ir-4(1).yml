@@ -1,0 +1,12 @@
+# In order to use this example, you will need
+# an ec2 instance running in an AWS VPC.
+# and then supply the subnet_id and instance_id
+# as extra vars
+- name: Example of quarantining with Ansible
+  hosts: localhost
+  roles:
+    - role: quarantine
+      region: "{{ aws_region }}"
+      vpc: "{{ vpc_id }}"
+      subnet: "{{ subnet_id }}"
+      instance: "{{ instance_id }}"

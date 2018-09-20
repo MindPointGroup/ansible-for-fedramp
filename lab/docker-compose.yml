@@ -1,0 +1,61 @@
+##
+## Copyright 2018, Jonathan I. Davila <jonathan@davila.io>
+##
+version: '3'
+services:
+  controller:
+    privileged: true
+    build: ./controller
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - "${PWD}/controller/content:/home/ansible/lab"
+      - "${HOME}/.aws:/home/ansible/.aws"
+    ports:
+     - "2220:22"
+    networks:
+     - common-network
+
+  web1:
+    privileged: true
+    build: ./targets
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    ports:
+     - "2022:22"
+     - "2080:80"
+    networks:
+     - common-network
+  web2:
+    privileged: true
+    build: ./targets
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    ports:
+     - "2122:22"
+     - "2180:80"
+    networks:
+     - common-network
+  web3:
+    privileged: true
+    build: ./targets
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    ports:
+     - "2222:22"
+     - "2280:80"
+    networks:
+     - common-network
+  haproxy:
+    privileged: true
+    build: ./targets
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    ports:
+     - "2322:22"
+     - "2380:80"
+    networks:
+     - common-network
+
+networks:
+  common-network:
+    driver: bridge

@@ -5,7 +5,7 @@ module.exports = [
     "subsection": "",
     "enhancement": 2,
     "description": "The organization employs automated mechanisms to maintain an up-to-date, complete, accurate, and readily available baseline configuration of the information system.\n",
-    "solution": "The system's baseline configuration is maintained by a number of Ansible Tower jobs. These Tower jobs are backed by source code which is periodically reviewed and updated as necessary. The baselines configurations which are automatically configured include [EXAMPLES], Images for Virtual Machine creation located at <insert source location>, NACLs <insert source location>, User Accounts of X services <insert source location>, Network Topology for AWS/Google Cloud/Azure <insert source location>, Firewalls <insert source location>, Network Devices <insert source location>, Load Balancers <insert source location>, Cloud Resources (S3, lamba functions, api gateways, etc) <insert source location>."
+    "solution": "The system's baseline configuration is maintained by a number of Ansible Tower jobs. These Tower jobs are backed by source code which is periodically reviewed and updated in accordance with CM policies. The baselines configurations which are automatically configured include [EXAMPLES], Images for Virtual Machine creation, NACLs, User Accounts of X services, Network Topology for AWS/Google Cloud/Azure, Firewalls, Network Devices, Load Balancers, Cloud Resources (S3, lamba functions, api gateways, etc)."
   },
   {
     "controlFamily": "CM",

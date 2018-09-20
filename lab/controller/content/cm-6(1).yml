@@ -1,0 +1,9 @@
+- name: Centrally manage, apply, and verify config settings for webservers
+  hosts: web_group
+  roles:
+    - role: ansible-role-nginx
+      become: yes
+      nginx_vhosts:
+        - server_name: fedramp
+          listen: 80
+

@@ -1,0 +1,11 @@
+[all:vars]
+ansible_user=ansible
+ansible_password=automation
+
+[haproxy_group]
+haproxy
+
+[web_group]
+web1
+web2
+web3

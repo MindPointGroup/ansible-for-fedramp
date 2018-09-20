@@ -1,0 +1,4 @@
+- name: Demonstration of AC-2 (1) to manage information system accounts
+  hosts: all
+  roles:
+    - autologic-users

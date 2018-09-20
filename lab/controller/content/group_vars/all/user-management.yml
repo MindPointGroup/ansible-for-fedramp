@@ -1,0 +1,18 @@
+autologic_department_pattern: true
+autologic_manage_sshkeys: false
+autologic_super_departments:
+  - ansible-og
+
+autologic_system_users:
+  'Jonathan Davila':
+    username: jdavila
+    state: present
+    departments:
+      - ansible-og
+      - jefe
+  'Puppet User':
+    username: sucka
+    state: present
+    departments:
+      - poor-souls
+      - sorrow
