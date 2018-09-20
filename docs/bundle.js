@@ -22212,7 +22212,7 @@ module.exports = [{
   "section": 2,
   "subsection": "f",
   "description": "Creates, enables, modifies, disables, and removes information system accounts in accordance with [Assignment: organization-defined procedures or conditions];\n",
-  "solution": "Accounts in the information system are managed through Ansible code which is executed using [Ansible Tower/AWX]. The logic of this code is static and operates off a dynamic variables file which indicates user accounts that must be created/enabled/disabled or removed"
+  "solution": "Accounts in the information system are managed through Ansible. The logic of which is stored in our git repository. The code is executed using [Ansible Tower/AWX]. The logic operates off a variables file, also in version control and living along side the execution logic itself. The variable file declares the user accounts that must be created or removed. This also includes whether they account should have elevated access or not and what groups a particular user account should be associated with."
 }, {
   "controlFamily": "AC",
   "section": 2,
@@ -22260,7 +22260,7 @@ module.exports = [{
   "subsection": "",
   "enhancement": 2,
   "description": "The organization employs automated mechanisms to maintain an up-to-date, complete, accurate, and readily available baseline configuration of the information system.\n",
-  "solution": "The system's baseline configuration is maintained by a number of Ansible Tower jobs. These Tower jobs are backed by source code which is periodically reviewed and updated as necessary. The baselines configurations which are automatically configured include [EXAMPLES], Images for Virtual Machine creation located at <insert source location>, NACLs <insert source location>, User Accounts of X services <insert source location>, Network Topology for AWS/Google Cloud/Azure <insert source location>, Firewalls <insert source location>, Network Devices <insert source location>, Load Balancers <insert source location>, Cloud Resources (S3, lamba functions, api gateways, etc) <insert source location>."
+  "solution": "The system's baseline configuration is maintained by a number of Ansible Tower jobs. These Tower jobs are backed by source code which is periodically reviewed and updated in accordance with CM policies. The baselines configurations which are automatically configured include [EXAMPLES], Images for Virtual Machine creation, NACLs, User Accounts of X services, Network Topology for AWS/Google Cloud/Azure, Firewalls, Network Devices, Load Balancers, Cloud Resources (S3, lamba functions, api gateways, etc)."
 }, {
   "controlFamily": "CM",
   "section": 2,
@@ -22294,7 +22294,7 @@ module.exports = [{
   "subsection": "",
   "enhancement": 1,
   "description": "The organization employs automated mechanisms to support the incident handling process.\n",
-  "solution": "Analysis and Containment - Ansible content exists that is capable of snapshotting and quarantining specific compute nodes for further analysis. This code is stored and versioned at <insert location>\nEradication - Ansible content exists that can destroy specific compute nodes as needed in the IR process. The code is stored and versioned at <insert location>\n"
+  "solution": "Analysis and Containment - Ansible content exists that is capable of cutting off all inbound and outbound network access to a compromised VM, subsequently snapshotting the aforementioned compute node and making the resultant image available for further analysis and forensics. This code is stored and versioned in our source control repository."
 }];
 
 /***/ }),

@@ -4,8 +4,7 @@ module.exports = [
     "section": 2,
     "subsection": "f",
     "description": "Creates, enables, modifies, disables, and removes information system accounts in accordance with [Assignment: organization-defined procedures or conditions];\n",
-    "solution": "Accounts in the information system are managed through Ansible. The logic of which is stored in our git repository. The code is executed using [Ansible Tower/AWX]. The logic operates off a variables file, also in version control and living along side the execution logic itself. The variable file declares the user accounts that must be created or removed. This also includes whether they account should have elevated access or not and what groups a particular user account should be associated with.
-"
+    "solution": "Accounts in the information system are managed through Ansible. The logic of which is stored in our git repository. The code is executed using [Ansible Tower/AWX]. The logic operates off a variables file, also in version control and living along side the execution logic itself. The variable file declares the user accounts that must be created or removed. This also includes whether they account should have elevated access or not and what groups a particular user account should be associated with."
   },
   {
     "controlFamily": "AC",
