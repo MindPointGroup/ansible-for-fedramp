@@ -11,7 +11,7 @@ module.exports = [
     "section": 2,
     "subsection": "k",
     "description": "Establishes a process for reissuing shared/group account credentials (if deployed) when individuals are removed from the group.\n",
-    "solution": "When a user is removed from the group a process is automatically triggered via Ansible code that will then reissue any shared credentials and distribute the new credential automatically via <NOTIFCATION METHOD>."
+    "solution": "When a user is removed from the group a process is automatically triggered via Ansible code that will then reissue any shared credentials and distribute the new credential automatically via **NOTIFCATION METHOD**."
   },
   {
     "controlFamily": "AC",
@@ -19,7 +19,7 @@ module.exports = [
     "subsection": "",
     "enhancement": 1,
     "description": "The organization employs automated mechanisms to support the management of information system accounts.\n",
-    "solution": "<Describe LDAP/AD/etc usage>. For accounts not directly managed with <AD/LDAP/etc> Ansible is leveraged to the management of accounts. Ansible logic is excuted from Tower/AWX located in <network location>."
+    "solution": "**Describe LDAP/AD/etc usage** For accounts not directly managed with AD/LDAP/etc Ansible is leveraged to the management of accounts. Ansible logic is excuted from Tower/AWX located in **network location**."
   },
   {
     "controlFamily": "AC",
@@ -27,7 +27,7 @@ module.exports = [
     "subsection": "",
     "enhancement": 2,
     "description": "The information system automatically [Selection: removes; disables] temporary and emergency accounts after [FedRAMP Assignment: no more than 30 days for temporary and emergency account types].\n",
-    "solution": "Ansible Tower has a preconfigured job to run every 30 days which <removes/disables> temporary and emergency accounts that have met or passed the 30 day timeframe. The logic for this activity can be found at <location of source code>."
+    "solution": "Ansible Tower has a preconfigured job to run every 30 days which removes/disables temporary and emergency accounts that have met or passed the 30 day timeframe. The logic for this activity can be found at **location of source code**."
   },
   {
     "controlFamily": "AC",
@@ -35,7 +35,7 @@ module.exports = [
     "subsection": "",
     "enhancement": 3,
     "description": "The information system automatically disables inactive accounts after [FedRAMP Assignment: ninety (90) days for user accounts].\n",
-    "solution": "Ansible Tower has a preconfigured job to run every 90 days which disableds inactive accounts that have met or passed the 90 day timeframe. The logic for this activity can be found at <location of source code>."
+    "solution": "Ansible Tower has a preconfigured job to run every 90 days which disableds inactive accounts that have met or passed the 90 day timeframe. The logic for this activity can be found at **location of source code**."
   },
   {
     "controlFamily": "AC",

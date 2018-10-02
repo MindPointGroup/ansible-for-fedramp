@@ -25,9 +25,7 @@ class Menu extends Tonic {
     return this.html`
       ${titles.join('\n')}
     `
-
   }
-
 }
 
 class Snippets extends Tonic {
@@ -51,7 +49,7 @@ class Snippets extends Tonic {
             <h2 class="subtitle">${controlTitle}</h2>
             <p><strong>Description:</strong>
             <br>
-              ${meta.description}
+              "${meta.description}"
             </p>
             <br>
             <p><strong>Solution:</strong>

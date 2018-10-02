@@ -17,7 +17,7 @@ class App extends Tonic {
     <div class="container">
       <h1 class="title">Ansible4FedRAMP</h1>
       <div class="notification is-primary">
-        A simple project that aims to make it easier to understand where Ansible can help with FedRAMP compliance
+        A simple project that aims to make it easier to understand where Ansible can help with FedRAMP compliance. Example ansible content with a docker-compose based lab can be found here: <a href="https://github.com/MindPointGroup/ansible-for-fedramp/tree/master/lab">Ansible-For-FedRAMP on GitHub</a>
       </div>
       <div class="columns is-mobile">
         <div id="left" class="column is-one-third">
