@@ -8711,7 +8711,7 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 /***/ (function(module, exports, __webpack_require__) {
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    <div class=\"container\">\n      <h1 class=\"title\">Ansible4FedRAMP</h1>\n      <div class=\"notification is-primary\">\n        A simple project that aims to make it easier to understand where Ansible can help with FedRAMP compliance\n      </div>\n      <div class=\"columns is-mobile\">\n        <div id=\"left\" class=\"column is-one-third\">\n          <div class=\"section\">\n            <h1 class=\"subtitle\">\n              Control Families\n            </h1>\n            <menu></menu>\n          </div>\n        </div>\n        <div class=\"column is-two-thirds is-offset-2\">\n          <div class=\"section\">\n            <snippets></snippets>\n          </div>\n        </div>\n      </div>\n     </div>\n    "]);
+  var data = _taggedTemplateLiteral(["\n    <div class=\"container\">\n      <h1 class=\"title\">Ansible4FedRAMP</h1>\n      <div class=\"notification is-primary\">\n        A simple project that aims to make it easier to understand where Ansible can help with FedRAMP compliance. Example ansible content with a docker-compose based lab can be found here: <a href=\"https://github.com/MindPointGroup/ansible-for-fedramp/tree/master/lab\">Ansible-For-FedRAMP on GitHub</a>\n      </div>\n      <div class=\"columns is-mobile\">\n        <div id=\"left\" class=\"column is-one-third\">\n          <div class=\"section\">\n            <h1 class=\"subtitle\">\n              Control Families\n            </h1>\n            <menu></menu>\n          </div>\n        </div>\n        <div class=\"column is-two-thirds is-offset-2\">\n          <div class=\"section\">\n            <snippets></snippets>\n          </div>\n        </div>\n      </div>\n     </div>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -8872,7 +8872,7 @@ class Snippets extends Tonic {
             controlTitle += " (".concat(meta.subsection, ")");
           }
 
-          innerData.push("\n          <div class=\"box\">\n            <h2 class=\"subtitle\">".concat(controlTitle, "</h2>\n            <p><strong>Description:</strong>\n            <br>\n              ").concat(meta.description, "\n            </p>\n            <br>\n            <p><strong>Solution:</strong>\n            <br>\n              ").concat(meta.solution, "\n            </p>\n          </div>\n        "));
+          innerData.push("\n          <div class=\"box\">\n            <h2 class=\"subtitle\">".concat(controlTitle, "</h2>\n            <p><strong>Description:</strong>\n            <br>\n              \"").concat(meta.description, "\"\n            </p>\n            <br>\n            <p><strong>Solution:</strong>\n            <br>\n              ").concat(meta.solution, "\n            </p>\n          </div>\n        "));
         }
       } catch (err) {
         _didIteratorError = true;
@@ -22218,28 +22218,28 @@ module.exports = [{
   "section": 2,
   "subsection": "k",
   "description": "Establishes a process for reissuing shared/group account credentials (if deployed) when individuals are removed from the group.\n",
-  "solution": "When a user is removed from the group a process is automatically triggered via Ansible code that will then reissue any shared credentials and distribute the new credential automatically via <NOTIFCATION METHOD>."
+  "solution": "When a user is removed from the group a process is automatically triggered via Ansible code that will then reissue any shared credentials and distribute the new credential automatically via **NOTIFCATION METHOD**."
 }, {
   "controlFamily": "AC",
   "section": 2,
   "subsection": "",
   "enhancement": 1,
   "description": "The organization employs automated mechanisms to support the management of information system accounts.\n",
-  "solution": "<Describe LDAP/AD/etc usage>. For accounts not directly managed with <AD/LDAP/etc> Ansible is leveraged to the management of accounts. Ansible logic is excuted from Tower/AWX located in <network location>."
+  "solution": "**Describe LDAP/AD/etc usage** For accounts not directly managed with AD/LDAP/etc Ansible is leveraged to the management of accounts. Ansible logic is excuted from Tower/AWX located in **network location**."
 }, {
   "controlFamily": "AC",
   "section": 2,
   "subsection": "",
   "enhancement": 2,
   "description": "The information system automatically [Selection: removes; disables] temporary and emergency accounts after [FedRAMP Assignment: no more than 30 days for temporary and emergency account types].\n",
-  "solution": "Ansible Tower has a preconfigured job to run every 30 days which <removes/disables> temporary and emergency accounts that have met or passed the 30 day timeframe. The logic for this activity can be found at <location of source code>."
+  "solution": "Ansible Tower has a preconfigured job to run every 30 days which removes/disables temporary and emergency accounts that have met or passed the 30 day timeframe. The logic for this activity can be found at **location of source code**."
 }, {
   "controlFamily": "AC",
   "section": 2,
   "subsection": "",
   "enhancement": 3,
   "description": "The information system automatically disables inactive accounts after [FedRAMP Assignment: ninety (90) days for user accounts].\n",
-  "solution": "Ansible Tower has a preconfigured job to run every 90 days which disableds inactive accounts that have met or passed the 90 day timeframe. The logic for this activity can be found at <location of source code>."
+  "solution": "Ansible Tower has a preconfigured job to run every 90 days which disableds inactive accounts that have met or passed the 90 day timeframe. The logic for this activity can be found at **location of source code**."
 }, {
   "controlFamily": "AC",
   "section": 2,
@@ -22306,13 +22306,13 @@ module.exports = [{
   "section": 2,
   "subsection": "a",
   "description": "(A) Identifies, reports, and corrects information system flaws\n",
-  "solution": "Through scheduled jobs, Ansible Tower invokes ansible content which is able to correct drift. When this drift is detected it is immediately corrected and a report is sent out as a <webhook/email/task describe logic used>"
+  "solution": "Through scheduled jobs, Ansible Tower invokes ansible content which is able to correct drift. When this drift is detected it is immediately corrected and a report is sent out as a **webhook/email/task describe logic used**"
 }, {
   "controlFamily": "SI",
   "section": 2,
   "subsection": "c",
   "description": "Installs security-relevant software and firmware updates within [FedRAMP Assignment: thirty 30 days of release of updates] of the release of the updates; and\n",
-  "solution": "Through a job scheduled at <interval of <= 30 days>, Ansible Tower invokes Ansible content which is able to install and apply system security patches. This content can be found <location of content>"
+  "solution": "Through a job scheduled at **interval of <= 30 days**, Ansible Tower invokes Ansible content which is able to install and apply system security patches. This content can be found **location of content**"
 }, {
   "controlFamily": "SI",
   "section": 2,
@@ -22324,14 +22324,14 @@ module.exports = [{
   "section": 2,
   "enhancement": 2,
   "description": "The organization employs automated mechanisms [FedRAMP Assignment: at least monthly] to determine the state of information system components with regard to flaw remediation.\n",
-  "solution": "The configuration and state of information system components is entirely defined as code in Ansible YAML syntax. When a flaw, such as drift detected or patch needed, is found, it is updated at <an interval of <=30 days> through a scheduled job within Ansible Tower\n"
+  "solution": "The configuration and state of information system components is entirely defined as code in Ansible YAML syntax. When a flaw, such as drift detected or patch needed, is found, it is updated at **an interval of <=30 days** through a scheduled job within Ansible Tower\n"
 }, {
   "controlFamily": "SI",
   "section": 2,
   "enhancement": 3,
   "subsection": "a",
   "description": "Measures the time between flaw identification and flaw remediation; and\n",
-  "solution": "Execution of Ansible content that is capable of identifying and addressing flaws is measured using Ansible Tower and that information cna be retrieved via API.\n"
+  "solution": "Execution of Ansible content that is capable of identifying and addressing flaws is measured using Ansible Tower and that information can be retrieved via API.\n"
 }];
 
 /***/ }),
